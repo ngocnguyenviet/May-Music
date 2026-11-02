@@ -1,0 +1,40 @@
+# Rust build output and bundled executables (use GitHub Releases for binaries).
+/target/
+/bin/
+# Keep Cargo.lock: this project is an application.
+
+# Local playlists and SQLite sidecar files.
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.sqlite3-journal
+
+# Runtime output and caches.
+*.log
+/.cache/
+/cache/
+__pycache__/
+*.py[cod]
+
+# Local environment settings and exported YouTube cookies.
+.env
+.env.*
+!.env.example
+!.env.sample
+cookies.txt
+cookies.*.txt
+
+# Editor and desktop temporary files.
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

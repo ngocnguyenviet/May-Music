@@ -1,0 +1,44 @@
+@define-color bg #101615;
+@define-color surface #18211f;
+@define-color raised #202d29;
+@define-color ink #edf4eb;
+@define-color muted #91a59b;
+@define-color accent #c4e99c;
+window { background: @bg; color: @ink; }
+headerbar { background: @bg; box-shadow: none; border-bottom: 1px solid #26332e; }
+button { border-radius: 10px; padding: 7px 12px; background: @raised; color: @ink; border: none; box-shadow: none; }
+button:hover { background: #304039; }
+button:disabled { opacity: 0.35; }
+button.flat { background: transparent; }
+button.accent { background: @accent; color: #1b301a; font-weight: 700; }
+button.accent:hover { background: #d6f5b5; }
+button.transport { min-width: 34px; min-height: 34px; border-radius: 999px; }
+button.play { background: @accent; color: #172b16; min-width: 44px; min-height: 44px; border-radius: 999px; }
+.sidebar { background: #141d1a; border-right: 1px solid #26332e; }
+.brand { font-size: 30px; font-weight: 800; letter-spacing: -1px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: @accent; }
+.hero { font-size: 30px; font-weight: 700; letter-spacing: -1px; }
+.section-title { font-size: 24px; font-weight: 700; }
+.muted { color: @muted; }
+.small { font-size: 11px; }
+.track-title { font-weight: 600; }
+.track-number { color: @muted; font-size: 12px; min-width: 22px; }
+.badge { color: @accent; background: #253825; padding: 5px 10px; border-radius: 999px; font-size: 10px; font-weight: 700; }
+entry { background: @surface; color: @ink; border: 1px solid #34463d; border-radius: 12px; min-height: 36px; padding: 4px 12px; box-shadow: none; }
+entry:focus { border-color: @accent; }
+list { background: transparent; }
+list > row { padding: 7px 9px; border-radius: 10px; margin: 2px 0; color: @ink; }
+list > row:hover { background: @surface; }
+list > row:selected { background: #2b3d30; color: @ink; }
+.tracks > row { border-bottom: 1px solid #202e28; }
+.now-playing { background: @surface; border-top: 1px solid #324138; }
+.album-tile { background: #2c4233; color: @accent; border-radius: 12px; padding: 12px; }
+.status { color: @muted; font-size: 11px; }
+.message { background: #293c2d; color: #e0efd7; padding: 9px 15px; border-radius: 9px; }
+scale trough { background: #34463c; min-height: 4px; border-radius: 8px; border: none; box-shadow: none; }
+scale highlight { background: @accent; border-radius: 8px; }
+scale slider { background: @accent; border: none; box-shadow: none; min-width: 10px; min-height: 10px; margin: -4px; }
+switch:checked { background: #7baf61; }
+popover contents { background: @surface; color: @ink; border: 1px solid #34463c; padding: 12px; }
+separator { background: #2a3931; min-height: 1px; }
+scrolledwindow { background: transparent; }
