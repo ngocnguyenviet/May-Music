@@ -2,6 +2,15 @@
 set -euo pipefail
 app_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 export PATH="$app_dir/bin:$PATH"
+# Use the app-specific YouTube session only when configured by the user.
+may_config="${XDG_CONFIG_HOME:-$HOME/.config}/may-music/yt-dlp.conf"
+may_python="${XDG_DATA_HOME:-$HOME/.local/share}/may-music/python"
+if [[ ! ${MAY_YTDLP_CONFIG+x} && -f "$may_config" ]]; then
+    export MAY_YTDLP_CONFIG="$may_config"
+fi
+if [[ -n ${MAY_YTDLP_CONFIG:-} && -d "$may_python" ]]; then
+    export PYTHONPATH="$may_python${PYTHONPATH:+:$PYTHONPATH}"
+fi
 # This interface needs no GPU renderer. Explicit user values take precedence.
 export GSK_RENDERER="${GSK_RENDERER-cairo}"
 export GDK_DISABLE="${GDK_DISABLE-gl,vulkan}"
